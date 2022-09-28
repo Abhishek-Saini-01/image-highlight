@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Highlights</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="imageBox">
+        <h1>Abhishek</h1>
+        <div id="focus"></div>
+    </div>
+
+
+
+    <script>
+        let focus = document.getElementById("focus");
+        let focusHalWidth = focus.offsetWidth/2;
+        document.onmousemove = (e)=>{
+            focus.style.left = e.pageX - focusHalWidth + "px";
+            focus.style.top = e.pageY - focusHalWidth + "px";
+        }
+    </script>
+</body>
+</html>
